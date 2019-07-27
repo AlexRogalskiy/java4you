@@ -1,7 +1,10 @@
 package com.sensiblemetrics.api.alpenidos.core.prototype;
 
 import com.sensiblemetrics.api.alpenidos.core.prototype.iface.Figura;
+import com.sensiblemetrics.api.alpenidos.core.prototype.iface.Prototype;
+import com.sensiblemetrics.api.alpenidos.core.prototype.iface.PrototypeFactory;
 import com.sensiblemetrics.api.alpenidos.core.prototype.model.Circulo;
+import com.sensiblemetrics.api.alpenidos.core.prototype.model.ConcretePrototypeOne;
 import com.sensiblemetrics.api.alpenidos.core.prototype.model.Cuadrado;
 import lombok.extern.slf4j.Slf4j;
 
@@ -61,5 +64,17 @@ public class Loader {
 
         circulo.getPosicion();
         cuadrado.getPosicion();
+    }
+
+    public static void main2(String[] args) {
+        final PrototypeFactory factory = new PrototypeFactory();
+        final Prototype object = new ConcretePrototypeOne();
+        final ConcretePrototypeOne clonedObject = (ConcretePrototypeOne) factory.getClone(object);
+
+        System.out.println(object);
+        System.out.println(clonedObject);
+        System.out.println("Object: " + System.identityHashCode(System.identityHashCode(object)));
+        System.out.println("Cloned Object HashCode: " + System.identityHashCode(System.identityHashCode(clonedObject)));
+
     }
 }
