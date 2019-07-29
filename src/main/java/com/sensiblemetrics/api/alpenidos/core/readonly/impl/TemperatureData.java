@@ -8,7 +8,7 @@ import java.util.List;
 
 public class TemperatureData implements TemperatureIF {
     private double temperature;
-    private List<TemperatureIF> listeners = new ArrayList<>();
+    private List<TemperatureListenerIF> listeners = new ArrayList<>();
 
     public void setTemperature(final double temperature) {
         this.temperature = temperature;
@@ -21,12 +21,12 @@ public class TemperatureData implements TemperatureIF {
     }
 
     @Override
-    public void addListener(final TemperatureIF listener) {
+    public void addListener(final TemperatureListenerIF listener) {
         this.listeners.add(listener);
     }
 
     @Override
-    public void removeListener(final TemperatureIF listener) {
+    public void removeListener(final TemperatureListenerIF listener) {
         this.listeners.remove(listener);
     }
 

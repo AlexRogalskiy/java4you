@@ -4,7 +4,7 @@ public interface TemperatureIF {
 
     double getTemperature();
 
-    void addListener(final TemperatureIF listener);
+    void addListener(final TemperatureListenerIF listener);
 
-    void removeListener(final TemperatureIF listener);
+    void removeListener(final TemperatureListenerIF listener);
 }
