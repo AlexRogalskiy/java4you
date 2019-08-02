@@ -21,12 +21,12 @@ import java.util.stream.Collectors;
  */
 public class BackgroundTaskExecutor {
 
-    public static interface OnInterruption<T> {
-        void accept(Future<T> t, Exception exception);
+    public interface OnInterruption<T> {
+        void accept(final Future<T> future, final Exception exception);
     }
 
-    public static interface OnShutdownError {
-        void accept(ExecutorService executor, Exception exception);
+    public interface OnShutdownError {
+        void accept(final ExecutorService executor, final Exception exception);
     }
 
     private final ExecutorService executor;
@@ -35,32 +35,32 @@ public class BackgroundTaskExecutor {
         this.executor = Executors.newFixedThreadPool(threadsForTasks);
     }
 
-    public <T> Future<T> execute(Callable<T> task) {
-        var submited = executor.submit(task);
+    public <T> Future<T> execute(final Callable<T> task) {
+        var submited = this.executor.submit(task);
         return submited;
     }
 
-    public <T> List<Future<T>> execute(List<Callable<T>> tasks) {
+    public <T> List<Future<T>> execute(final List<Callable<T>> tasks) {
         var futureTasks = tasks.stream()
-            .map(executor::submit)
+            .map(this.executor::submit)
             .collect(Collectors.toList());
         return futureTasks;
     }
 
-    public <T> boolean cancel(Future<T> task) {
+    public <T> boolean cancel(final Future<T> task) {
         var canceled = task.cancel(true);
         return canceled;
     }
 
-    public <T> boolean cancel(List<FutureTask<T>> task) {
+    public <T> boolean cancel(final List<FutureTask<T>> task) {
         var hasAFalse = task.stream()
             .map(f -> f.cancel(true))
             .anyMatch(b -> b.equals(false));
         return !hasAFalse;
     }
 
-    public <T> List<Optional<T>> completeTask(List<Future<T>> tasks, OnInterruption<T> onInterruption) {
-        Function<Future<T>, Optional<T>> fn = (task) -> {
+    public <T> List<Optional<T>> completeTask(final List<Future<T>> tasks, final OnInterruption<T> onInterruption) {
+        final Function<Future<T>, Optional<T>> operator = (task) -> {
             try {
                 return Optional.ofNullable(task.get());
             } catch (InterruptedException | ExecutionException e) {
@@ -69,12 +69,12 @@ public class BackgroundTaskExecutor {
             }
         };
         var results = tasks.stream()
-            .map(fn)
+            .map(operator)
             .collect(Collectors.toList());
         return results;
     }
 
-    public <T> Optional<T> completeTask(Future<T> task, OnInterruption<T> onInterruption) {
+    public <T> Optional<T> completeTask(final Future<T> task, final OnInterruption<T> onInterruption) {
         try {
             return Optional.ofNullable(task.get());
         } catch (InterruptedException | ExecutionException e) {
@@ -83,23 +83,22 @@ public class BackgroundTaskExecutor {
         }
     }
 
-    public void shutdownTasks(long timeout, TimeUnit timeUnit, OnShutdownError onShutdownError) {
-        executor.shutdown();
+    public void shutdownTasks(final long timeout, final TimeUnit timeUnit, final OnShutdownError onShutdownError) {
+        this.executor.shutdown();
         try {
-            executor.awaitTermination(timeout, timeUnit);
+            this.executor.awaitTermination(timeout, timeUnit);
         } catch (InterruptedException e) {
-            onShutdownError.accept(executor, e);
+            onShutdownError.accept(this.executor, e);
         }
     }
 
-    public List<Runnable> shutdownNowTasks(long timeout, TimeUnit timeUnit, OnShutdownError onShutdownError) {
-        var remainingTasks = executor.shutdownNow();
+    public List<Runnable> shutdownNowTasks(final long timeout, final TimeUnit timeUnit, final OnShutdownError onShutdownError) {
+        var remainingTasks = this.executor.shutdownNow();
         try {
-            executor.awaitTermination(timeout, timeUnit);
+            this.executor.awaitTermination(timeout, timeUnit);
         } catch (InterruptedException e) {
-            onShutdownError.accept(executor, e);
+            onShutdownError.accept(this.executor, e);
         }
         return remainingTasks;
     }
-
 }

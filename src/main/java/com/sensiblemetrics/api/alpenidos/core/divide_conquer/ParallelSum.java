@@ -16,13 +16,12 @@ import java.util.stream.LongStream;
  * machine and check which one is better!
  */
 public class ParallelSum extends RecursiveTask<BigInteger> {
-
-    private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = -5339647960481426880L;
     private final static int THRESHOLD = 10_000; // Choosing a number to split the computation
 
     private List<BigInteger> nums;
 
-    public ParallelSum(List<BigInteger> nums) {
+    public ParallelSum(final List<BigInteger> nums) {
         this.nums = nums;
     }
 

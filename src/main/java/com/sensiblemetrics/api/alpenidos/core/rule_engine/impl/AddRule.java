@@ -23,7 +23,7 @@ public class AddRule implements Rule {
 }
 
 /*
-@Test
+@ObserverPatternLoader
 public void whenNumbersGivenToRuleEngine_thenReturnCorrectResult() {
     Expression expression = new Expression(5, 5, Operator.ADD);
     RuleEngine engine = new RuleEngine();

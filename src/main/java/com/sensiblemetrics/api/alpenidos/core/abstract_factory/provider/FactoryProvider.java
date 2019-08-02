@@ -1,5 +1,6 @@
 package com.sensiblemetrics.api.alpenidos.core.abstract_factory.provider;
 
+import com.sensiblemetrics.api.alpenidos.core.abstract_factory.enums.FactoryType;
 import com.sensiblemetrics.api.alpenidos.core.abstract_factory.factory.AnimalFactory;
 import com.sensiblemetrics.api.alpenidos.core.abstract_factory.factory.ColorFactory;
 import com.sensiblemetrics.api.alpenidos.core.abstract_factory.iface.AbstractFactory;
@@ -13,5 +14,16 @@ public class FactoryProvider {
             return new ColorFactory();
         }
         return null;
+    }
+
+    public static AbstractFactory getFactory(final FactoryType factoryType) {
+        switch (factoryType) {
+            case ANIMAL:
+                return new AnimalFactory();
+            case COLOR:
+                return new ColorFactory();
+            default:
+                throw new IllegalArgumentException(String.format("Factory type {%s} is not supported", factoryType));
+        }
     }
 }

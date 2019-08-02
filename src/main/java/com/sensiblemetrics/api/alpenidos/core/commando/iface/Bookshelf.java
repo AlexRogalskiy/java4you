@@ -6,7 +6,7 @@ public interface Bookshelf {
 
     default void init() {
         this.add(new BookImpl("Wilson, Robert Anton & Shea, Robert", "Illuminati", 9.99));
-        this.add(new BookImpl("Fowler, Martin", "Patterns of Enterprise Application Architecture", 27.88));
+        this.add(new BookImpl("Fowler, Martin", "Patterns of Enterprise TemplateMethodPatternLoader Architecture", 27.88));
     }
 
     Bookshelf getInstance();
