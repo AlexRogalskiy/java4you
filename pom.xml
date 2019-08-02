@@ -501,7 +501,8 @@
                                 <goal>check</goal>
                             </goals>
                             <configuration>
-                                <excludeFromFailureFile>exclude-pmd.properties</excludeFromFailureFile>
+                                <excludeFromFailureFile>${project.basedir}/checkstyle/exclude-pmd.properties
+                                </excludeFromFailureFile>
                             </configuration>
                         </execution>
                     </executions>
