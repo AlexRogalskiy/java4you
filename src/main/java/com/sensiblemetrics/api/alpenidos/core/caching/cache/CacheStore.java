@@ -1,6 +1,6 @@
 package com.sensiblemetrics.api.alpenidos.core.caching.cache;
 
-import com.sensiblemetrics.api.alpenidos.core.caching.DbManager;
+import com.sensiblemetrics.api.alpenidos.core.caching.impl.DbManager;
 import com.sensiblemetrics.api.alpenidos.core.caching.model.UserAccount;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
