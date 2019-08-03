@@ -50,4 +50,6 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires com.h2database;
     requires guice;
     requires org.apache.commons.io;
+    requires camel.core;
+    requires camel.api;
 }
