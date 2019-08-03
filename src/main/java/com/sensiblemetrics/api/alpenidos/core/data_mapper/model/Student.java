@@ -1,4 +1,4 @@
-package com.sensiblemetrics.api.alpenidos.core.datamapper.model;
+package com.sensiblemetrics.api.alpenidos.core.data_mapper.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -1,4 +1,4 @@
-package com.sensiblemetrics.api.alpenidos.core.datamapper.exception;
+package com.sensiblemetrics.api.alpenidos.core.data_mapper.exception;
 
 /**
  * Using Runtime Exception for avoiding dependancy on implementation exceptions. This helps in

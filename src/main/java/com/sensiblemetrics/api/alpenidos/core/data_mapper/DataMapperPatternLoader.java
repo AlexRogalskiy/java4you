@@ -1,8 +1,8 @@
-package com.sensiblemetrics.api.alpenidos.core.datamapper;
+package com.sensiblemetrics.api.alpenidos.core.data_mapper;
 
-import com.sensiblemetrics.api.alpenidos.core.datamapper.iface.StudentDataMapper;
-import com.sensiblemetrics.api.alpenidos.core.datamapper.impl.StudentDataMapperImpl;
-import com.sensiblemetrics.api.alpenidos.core.datamapper.model.Student;
+import com.sensiblemetrics.api.alpenidos.core.data_mapper.iface.StudentDataMapper;
+import com.sensiblemetrics.api.alpenidos.core.data_mapper.impl.StudentDataMapperImpl;
+import com.sensiblemetrics.api.alpenidos.core.data_mapper.model.Student;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Optional;

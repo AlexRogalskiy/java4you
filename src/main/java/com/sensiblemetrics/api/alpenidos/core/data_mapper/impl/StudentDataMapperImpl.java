@@ -1,8 +1,8 @@
-package com.sensiblemetrics.api.alpenidos.core.datamapper.impl;
+package com.sensiblemetrics.api.alpenidos.core.data_mapper.impl;
 
-import com.sensiblemetrics.api.alpenidos.core.datamapper.exception.DataMapperException;
-import com.sensiblemetrics.api.alpenidos.core.datamapper.iface.StudentDataMapper;
-import com.sensiblemetrics.api.alpenidos.core.datamapper.model.Student;
+import com.sensiblemetrics.api.alpenidos.core.data_mapper.exception.DataMapperException;
+import com.sensiblemetrics.api.alpenidos.core.data_mapper.iface.StudentDataMapper;
+import com.sensiblemetrics.api.alpenidos.core.data_mapper.model.Student;
 import lombok.Data;
 
 import java.util.ArrayList;

@@ -48,4 +48,6 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires mysql.connector.java;
     requires spring.beans;
     requires com.h2database;
+    requires guice;
+    requires org.apache.commons.io;
 }
