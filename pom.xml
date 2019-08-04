@@ -45,6 +45,7 @@
 
         <spring-webmvc.version>5.1.6.RELEASE</spring-webmvc.version>
         <spring-boot-starter.version>2.1.4.RELEASE</spring-boot-starter.version>
+        <spring-data-jpa.version>2.1.5.RELEASE</spring-data-jpa.version>
 
         <camel.version>3.0.0-M1</camel.version>
 
@@ -1563,7 +1564,7 @@
         <dependency>
             <groupId>org.springframework.data</groupId>
             <artifactId>spring-data-jpa</artifactId>
-            <version>${spring-boot-starter.version}</version>
+            <version>${spring-data-jpa.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
