@@ -1312,7 +1312,8 @@
                 </plugins>
             </build>
         </profile>
-        <profile>c
+
+        <profile>
             <id>sonar-coverage</id>
             <build>
                 <pluginManagement>

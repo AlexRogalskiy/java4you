@@ -52,4 +52,5 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires org.apache.commons.io;
     requires camel.core;
     requires camel.api;
+    requires gson;
 }
