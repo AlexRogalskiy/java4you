@@ -1,11 +1,15 @@
 package com.sensiblemetrics.api.alpenidos.core.double_dispatch.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Game objects have coordinates and some other status information.
  */
 @Data
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public abstract class GameObject extends Rectangle {
     private boolean damaged;
     private boolean onFire;

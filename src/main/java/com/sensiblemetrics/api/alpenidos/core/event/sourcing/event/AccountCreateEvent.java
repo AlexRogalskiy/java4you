@@ -3,6 +3,8 @@ package com.sensiblemetrics.api.alpenidos.core.event.sourcing.event;
 import com.sensiblemetrics.api.alpenidos.core.event.sourcing.model.Account;
 import com.sensiblemetrics.api.alpenidos.core.event.sourcing.state.AccountAggregate;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * This is the class that implements account create event.
@@ -13,6 +15,8 @@ import lombok.Data;
  * Created by Serdar Hamzaogullari on 06.08.2017.
  */
 @Data
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class AccountCreateEvent extends DomainEvent {
     private final int accountNo;
     private final String owner;

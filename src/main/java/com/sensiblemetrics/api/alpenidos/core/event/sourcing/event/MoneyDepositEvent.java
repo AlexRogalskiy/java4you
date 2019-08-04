@@ -3,6 +3,8 @@ package com.sensiblemetrics.api.alpenidos.core.event.sourcing.event;
 import com.sensiblemetrics.api.alpenidos.core.event.sourcing.model.Account;
 import com.sensiblemetrics.api.alpenidos.core.event.sourcing.state.AccountAggregate;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 import java.util.Optional;
@@ -16,6 +18,8 @@ import java.util.Optional;
  * Created by Serdar Hamzaogullari on 06.08.2017.
  */
 @Data
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class MoneyDepositEvent extends DomainEvent {
     private final BigDecimal money;
     private final int accountNo;

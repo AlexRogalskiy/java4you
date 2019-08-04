@@ -11,7 +11,6 @@ import java.util.*;
  * between 1 and 20.
  */
 @EqualsAndHashCode
-@ToString
 public class LotteryNumbers {
     private final Set<Integer> numbers;
 
