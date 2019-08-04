@@ -2,7 +2,9 @@ package com.sensiblemetrics.api.alpenidos.core.mediator.iface;
 
 import com.sensiblemetrics.api.alpenidos.core.mediator.impl.AirportControl;
 
-public interface Aircraft {
+import java.io.Serializable;
+
+public interface Aircraft extends Serializable {
 
     void setControl(final AirportControl control);
 

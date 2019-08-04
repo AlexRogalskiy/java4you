@@ -2,6 +2,7 @@ package com.sensiblemetrics.api.alpenidos.core.mediator.impl;
 
 import com.sensiblemetrics.api.alpenidos.core.mediator.iface.Aircraft;
 
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,7 +11,9 @@ import java.util.Map;
  * <p>
  * Mediator in the Mediator pattern.
  */
-public class AirportControl {
+public class AirportControl implements Serializable {
+    private static final long serialVersionUID = 2258174644584388314L;
+
     private final Map<Aircraft, Integer> positions = new HashMap<>();
 
     /**

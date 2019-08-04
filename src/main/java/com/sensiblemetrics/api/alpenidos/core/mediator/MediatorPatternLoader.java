@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class MediatorPatternLoader {
+
     public static void main(final String[] args) {
         final AirportControl airportControl = new AirportControl();
 

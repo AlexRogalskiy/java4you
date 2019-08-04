@@ -3,6 +3,7 @@ package com.sensiblemetrics.api.alpenidos.core.mediator.impl;
 import com.sensiblemetrics.api.alpenidos.core.mediator.iface.Aircraft;
 import lombok.EqualsAndHashCode;
 import lombok.ToString;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.HashSet;
 import java.util.Set;
@@ -10,9 +11,12 @@ import java.util.Set;
 /**
  * Created by tully.
  */
+@Slf4j
 @EqualsAndHashCode
 @ToString
 public class Plane implements Aircraft {
+    private static final long serialVersionUID = 2395739839529062959L;
+
     private final Set<Integer> dangerous = new HashSet<>();
 
     private AirportControl control;
@@ -33,7 +37,7 @@ public class Plane implements Aircraft {
     @Override
     public void moveTo(int sector) {
         if (this.dangerous.contains(sector)) {
-            System.out.println("Can't move to: " + sector);
+            log.debug("Can't move to: " + sector);
         } else {
             this.selfSector = sector;
         }

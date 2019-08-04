@@ -27,7 +27,7 @@ public class ParallelDivideAndConquer {
 	
 	public static class Task extends RecursiveTask<Integer> {
 
-		private static final long serialVersionUID = 1L;
+		private static final long serialVersionUID = -5258594180276793687L;
 		private List<Integer> somethingToDivideAndConquer;
 
 		public Task(List<Integer> somethingToDivideAndConquer) {
