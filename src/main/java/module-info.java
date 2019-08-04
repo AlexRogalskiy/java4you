@@ -53,7 +53,9 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires camel.core;
     requires camel.api;
     requires gson;
-    requires mongodb.driver;
-    requires org.mongodb.bson;
-    requires org.mongodb.driver.core;
+    //requires mongodb.driver;
+//    requires org.mongodb.bson;
+//    requires org.mongodb.driver.core;
+    requires mongo.java.driver;
+    //requires org.mongodb.bson;
 }

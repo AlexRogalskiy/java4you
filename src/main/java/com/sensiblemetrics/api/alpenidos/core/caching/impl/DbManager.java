@@ -1,18 +1,17 @@
 package com.sensiblemetrics.api.alpenidos.core.caching.impl;
 
-//import com.mongodb.MongoClient;
-//import com.mongodb.client.FindIterable;
-//import com.mongodb.client.MongoDatabase;
-//import com.mongodb.client.model.UpdateOptions;
-
+import com.mongodb.MongoClient;
+import com.mongodb.client.FindIterable;
+import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.UpdateOptions;
+import com.sensiblemetrics.api.alpenidos.core.caching.constants.CachingConstants;
 import com.sensiblemetrics.api.alpenidos.core.caching.model.UserAccount;
 import lombok.experimental.UtilityClass;
+import org.bson.Document;
 
 import java.text.ParseException;
 import java.util.HashMap;
 import java.util.Map;
-
-//import org.bson.Document;
 
 /**
  * <p>DBManager handles the communication with the underlying data store i.e. Database. It contains the
@@ -25,8 +24,8 @@ import java.util.Map;
  */
 @UtilityClass
 public class DbManager {
-    //    private static MongoClient mongoClient;
-//    private static MongoDatabase db;
+    private static MongoClient mongoClient;
+    private static MongoDatabase db;
     private static boolean useMongoDB;
 
     private static Map<String, UserAccount> virtualDB;
@@ -44,8 +43,8 @@ public class DbManager {
      */
     public static void connect() throws ParseException {
         useMongoDB = true;
-//        mongoClient = new MongoClient();
-//        db = mongoClient.getDatabase("test");
+        mongoClient = new MongoClient();
+        db = mongoClient.getDatabase("test");
     }
 
     /**
@@ -58,20 +57,19 @@ public class DbManager {
             }
             return null;
         }
-//        if (db == null) {
-//            try {
-//                connect();
-//            } catch (ParseException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        FindIterable<Document> iterable = db.getCollection(CachingConstants.USER_ACCOUNT).find(new Document(CachingConstants.USER_ID, userId));
-//        if (iterable == null) {
-//            return null;
-//        }
-//        final Document doc = iterable.first();
-//        return new UserAccount(userId, doc.getString(CachingConstants.USER_NAME), doc.getString(CachingConstants.ADD_INFO));
-        return null;
+        if (db == null) {
+            try {
+                connect();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        final FindIterable<Document> iterable = db.getCollection(CachingConstants.USER_ACCOUNT).find(new Document(CachingConstants.USER_ID, userId));
+        if (iterable == null) {
+            return null;
+        }
+        final Document doc = iterable.first();
+        return new UserAccount(userId, doc.getString(CachingConstants.USER_NAME), doc.getString(CachingConstants.ADD_INFO));
     }
 
     /**
@@ -82,17 +80,17 @@ public class DbManager {
             virtualDB.put(userAccount.getUserId(), userAccount);
             return;
         }
-//        if (db == null) {
-//            try {
-//                connect();
-//            } catch (ParseException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        db.getCollection(CachingConstants.USER_ACCOUNT).insertOne(new Document(CachingConstants.USER_ID, userAccount.getUserId())
-//            .append(CachingConstants.USER_NAME, userAccount.getUserName())
-//            .append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo())
-//        );
+        if (db == null) {
+            try {
+                connect();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        db.getCollection(CachingConstants.USER_ACCOUNT).insertOne(new Document(CachingConstants.USER_ID, userAccount.getUserId())
+            .append(CachingConstants.USER_NAME, userAccount.getUserName())
+            .append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo())
+        );
     }
 
     /**
@@ -103,17 +101,17 @@ public class DbManager {
             virtualDB.put(userAccount.getUserId(), userAccount);
             return;
         }
-//        if (db == null) {
-//            try {
-//                connect();
-//            } catch (ParseException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        db.getCollection(CachingConstants.USER_ACCOUNT).updateOne(
-//            new Document(CachingConstants.USER_ID, userAccount.getUserId()),
-//            new Document("$set", new Document(CachingConstants.USER_NAME, userAccount.getUserName()).append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo()))
-//        );
+        if (db == null) {
+            try {
+                connect();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        db.getCollection(CachingConstants.USER_ACCOUNT).updateOne(
+            new Document(CachingConstants.USER_ID, userAccount.getUserId()),
+            new Document("$set", new Document(CachingConstants.USER_NAME, userAccount.getUserName()).append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo()))
+        );
     }
 
     /**
@@ -124,20 +122,20 @@ public class DbManager {
             virtualDB.put(userAccount.getUserId(), userAccount);
             return;
         }
-//        if (db == null) {
-//            try {
-//                connect();
-//            } catch (ParseException e) {
-//                e.printStackTrace();
-//            }
-//        }
-//        db.getCollection(CachingConstants.USER_ACCOUNT).updateOne(
-//            new Document(CachingConstants.USER_ID, userAccount.getUserId()),
-//            new Document("$set", new Document(CachingConstants.USER_ID, userAccount.getUserId())
-//                .append(CachingConstants.USER_NAME, userAccount.getUserName())
-//                .append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo())
-//            ),
-//            new UpdateOptions().upsert(true)
-//        );
+        if (db == null) {
+            try {
+                connect();
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+        }
+        db.getCollection(CachingConstants.USER_ACCOUNT).updateOne(
+            new Document(CachingConstants.USER_ID, userAccount.getUserId()),
+            new Document("$set", new Document(CachingConstants.USER_ID, userAccount.getUserId())
+                .append(CachingConstants.USER_NAME, userAccount.getUserName())
+                .append(CachingConstants.ADD_INFO, userAccount.getAdditionalInfo())
+            ),
+            new UpdateOptions().upsert(true)
+        );
     }
 }
