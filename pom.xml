@@ -1704,6 +1704,11 @@
             <artifactId>bson</artifactId>
             <version>${mongodb.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongo-java-driver</artifactId>
+            <version>${mongodb.version}</version>
+        </dependency>
 
         <dependency>
             <groupId>com.h2database</groupId>
