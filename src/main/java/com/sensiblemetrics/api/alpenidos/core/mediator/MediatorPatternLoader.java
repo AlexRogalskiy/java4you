@@ -3,9 +3,11 @@ package com.sensiblemetrics.api.alpenidos.core.mediator;
 import com.sensiblemetrics.api.alpenidos.core.mediator.iface.Aircraft;
 import com.sensiblemetrics.api.alpenidos.core.mediator.impl.AirportControl;
 import com.sensiblemetrics.api.alpenidos.core.mediator.impl.Plane;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class MediatorPatternLoader {
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         final AirportControl airportControl = new AirportControl();
 
         final Aircraft aircraftA = new Plane("A", 0);
@@ -14,24 +16,21 @@ public class MediatorPatternLoader {
         aircraftA.setControl(airportControl);
         aircraftB.setControl(airportControl);
 
-        System.out.println(aircraftA);
-        System.out.println(aircraftB);
-        System.out.println();
+        log.debug(String.valueOf(aircraftA));
+        log.debug(String.valueOf(aircraftB));
 
         final Aircraft aircraftC = new Plane("C", 20);
         aircraftC.setControl(airportControl);
 
-        System.out.println(aircraftA);
-        System.out.println(aircraftB);
-        System.out.println(aircraftC);
-        System.out.println();
+        log.debug(String.valueOf(aircraftA));
+        log.debug(String.valueOf(aircraftB));
+        log.debug(String.valueOf(aircraftC));
 
         aircraftA.moveTo(10);
         aircraftA.moveTo(30);
 
-        System.out.println(aircraftA);
-        System.out.println(aircraftB);
-        System.out.println(aircraftC);
-        System.out.println();
+        log.debug(String.valueOf(aircraftA));
+        log.debug(String.valueOf(aircraftB));
+        log.debug(String.valueOf(aircraftC));
     }
 }

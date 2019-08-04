@@ -19,7 +19,7 @@ public class ConsoleLottery {
     /**
      * Program entry point
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         MongoConnectionPropertiesLoader.load();
         final Injector injector = Guice.createInjector(new LotteryModule());
         final LotteryService service = injector.getInstance(LotteryService.class);

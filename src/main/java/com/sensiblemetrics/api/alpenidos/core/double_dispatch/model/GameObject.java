@@ -2,14 +2,12 @@ package com.sensiblemetrics.api.alpenidos.core.double_dispatch.model;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.ToString;
 
 /**
  * Game objects have coordinates and some other status information.
  */
 @Data
 @EqualsAndHashCode(callSuper = true)
-@ToString(callSuper = true)
 public abstract class GameObject extends Rectangle {
     private boolean damaged;
     private boolean onFire;
@@ -20,7 +18,7 @@ public abstract class GameObject extends Rectangle {
 
     @Override
     public String toString() {
-        return String.format("%s at %s damaged=%b onFire=%b", this.getClass().getSimpleName(), super.toString(), isDamaged(), isOnFire());
+        return String.format("%s at %s damaged=%b onFire=%b", this.getClass().getSimpleName(), super.toString(), this.isDamaged(), this.isOnFire());
     }
 
     public abstract void collision(final GameObject gameObject);

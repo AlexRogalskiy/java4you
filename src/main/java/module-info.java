@@ -37,6 +37,7 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires java.instrument;
     requires junit;
     requires jsr305;
+    //requires java.annotation;
     requires spring.web;
     requires org.apache.httpcomponents.httpclient;
     requires spring.context;
@@ -48,16 +49,16 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires mysql.connector.java;
     requires spring.beans;
     requires com.h2database;
-    requires guice;
+    //requires jaxb.core;
     requires org.apache.commons.io;
     requires camel.core;
     requires camel.api;
     requires gson;
-    //requires mongodb.driver;
-//    requires org.mongodb.bson;
-//    requires org.mongodb.driver.core;
     requires mongo.java.driver;
     requires spring.tx;
     requires spring.data.commons;
-    //requires org.mongodb.bson;
+    requires spring.aop;
+    requires com.google.guice;
+    //requires java.xml.bind;
+    //requires com.sun.xml.bind;
 }

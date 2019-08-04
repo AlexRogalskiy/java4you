@@ -4,7 +4,6 @@ import com.sensiblemetrics.api.alpenidos.core.layers.model.Cake;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
-import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -13,7 +12,6 @@ import javax.persistence.*;
  */
 @Data
 @EqualsAndHashCode
-@ToString
 @NoArgsConstructor
 @Entity
 public class CakeTopping {

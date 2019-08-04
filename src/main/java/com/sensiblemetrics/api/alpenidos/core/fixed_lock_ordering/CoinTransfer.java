@@ -31,18 +31,20 @@ public class CoinTransfer {
 		}
 
 		public BigInteger getCoins() {
-			return coins;
+			return this.coins;
 		}
 
 		public void depositCoins(BigInteger amount) {
-			if (amount.intValue() < -1)
-				throw new IllegalArgumentException("Amount can't be negative");
+			if (amount.intValue() < -1) {
+                throw new IllegalArgumentException("Amount can't be negative");
+            }
 			this.coins = this.coins.add(amount);
 		}
 
 		public void withdrawCoins(BigInteger amount) {
-			if (amount.intValue() < -1)
-				throw new IllegalArgumentException("Amount can't be negative");
+			if (amount.intValue() < -1) {
+                throw new IllegalArgumentException("Amount can't be negative");
+            }
 			this.coins = this.coins.subtract(amount);
 		}
 	}
