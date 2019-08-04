@@ -57,5 +57,7 @@ open module com.sensiblemetrics.api.alpenidos.core {
 //    requires org.mongodb.bson;
 //    requires org.mongodb.driver.core;
     requires mongo.java.driver;
+    requires spring.tx;
+    requires spring.data.commons;
     //requires org.mongodb.bson;
 }
