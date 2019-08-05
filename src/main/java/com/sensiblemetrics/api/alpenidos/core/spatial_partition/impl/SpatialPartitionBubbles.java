@@ -1,8 +1,8 @@
 package com.sensiblemetrics.api.alpenidos.core.spatial_partition.impl;
 
-import com.sensiblemetrics.api.alpenidos.core.spatial_partition.model.QuadTree;
 import com.sensiblemetrics.api.alpenidos.core.spatial_partition.model.Bubble;
 import com.sensiblemetrics.api.alpenidos.core.spatial_partition.model.Point;
+import com.sensiblemetrics.api.alpenidos.core.spatial_partition.model.QuadTree;
 import com.sensiblemetrics.api.alpenidos.core.spatial_partition.model.Rect;
 
 import java.util.ArrayList;
@@ -21,7 +21,7 @@ public class SpatialPartitionBubbles extends SpatialPartitionGeneric<Bubble> {
 
     public void handleCollisionsUsingQt(final Bubble b) {
         //finding points within area of a square drawn with centre same as centre of bubble and length = radius of bubble
-        final Rect rect = new Rect(b.x, b.y, 2 * b.radius, 2 * b.radius);
+        final Rect rect = new Rect(b.getX(), b.getY(), 2 * b.getRadius(), 2 * b.getRadius());
         final List<Point> quadTreeQueryResult = new ArrayList<>();
         this.getQTree().query(rect, quadTreeQueryResult);
         //handling these collisions
