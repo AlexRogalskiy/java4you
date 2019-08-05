@@ -1,9 +1,13 @@
 package com.sensiblemetrics.api.alpenidos.core.singleton;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * Initialization on demand singleton pattern. Uses a nested static class to
  * hold a reference to the singleton instance.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class InitOnDemandSingleton {
     /**
      * Holder for a singleton instance.
@@ -11,17 +15,10 @@ public class InitOnDemandSingleton {
      * @author Donato Rimenti
      */
     private static class InstanceHolder {
-
         /**
          * Current instance of the singleton.
          */
         private static final InitOnDemandSingleton INSTANCE = new InitOnDemandSingleton();
-    }
-
-    /**
-     * Private constructor to avoid instantiation.
-     */
-    private InitOnDemandSingleton() {
     }
 
     /**

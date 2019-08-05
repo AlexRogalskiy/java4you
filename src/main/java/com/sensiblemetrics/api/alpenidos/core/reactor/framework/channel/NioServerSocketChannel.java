@@ -31,7 +31,7 @@ public class NioServerSocketChannel extends AbstractNioChannel {
      * @throws IOException if any I/O error occurs.
      */
     public NioServerSocketChannel(final int port, final ChannelHandler handler) throws IOException {
-        super(handler, ServerSocketChannel.open());
+        super(ServerSocketChannel.open(), handler);
         this.port = port;
     }
 

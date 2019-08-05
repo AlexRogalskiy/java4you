@@ -59,6 +59,15 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires spring.data.commons;
     requires spring.aop;
     requires com.google.guice;
+    requires spring.data.jpa;
+    requires spring.orm;
+    requires jackson.annotations;
+    requires aws.java.sdk.dynamodb;
+    requires jackson.databind;
+    requires aws.java.sdk.core;
+    requires aws.lambda.java.events;
+    requires jackson.core;
+    requires aws.lambda.java.core;
     //requires java.xml.bind;
     //requires com.sun.xml.bind;
 }

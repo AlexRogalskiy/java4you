@@ -1,20 +1,18 @@
 package com.sensiblemetrics.api.alpenidos.core.singleton;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * Draconian singleton. The method to get the instance is synchronized.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DraconianSingleton {
 
     /**
      * Current instance of the singleton.
      */
     private static DraconianSingleton instance;
-
-    /**
-     * Private constructor to avoid instantiation.
-     */
-    private DraconianSingleton() {
-    }
 
     /**
      * Returns the current instance of the singleton.

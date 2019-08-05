@@ -1,19 +1,17 @@
 package com.sensiblemetrics.api.alpenidos.core.singleton;
 
+import lombok.AccessLevel;
+import lombok.NoArgsConstructor;
+
 /**
  * Double-checked locking design pattern applied to a singleton.
  */
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public class DclSingleton {
     /**
      * Current instance of the singleton.
      */
     private static volatile DclSingleton instance;
-
-    /**
-     * Private constructor to avoid instantiation.
-     */
-    private DclSingleton() {
-    }
 
     /**
      * Returns the current instance of the singleton.

@@ -1,6 +1,51 @@
-# Diffy common configuration
+# Alpenidos Core service configuration
+---
+spring:
+  profiles:
+    active: ${spring.profiles.active}
+---
+logging:
+  config: classpath:logback.xml
+  file: logs/application.log
+  level:
+    ROOT: DEBUG
+    org.springframework: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.data: DEBUG
+    org.springframework.batch: DEBUG
+    org.springframework.hibernate: DEBUG
+    org.springframework.boot.autoconfigure.security: DEBUG
+    org.springframework.web.servlet.mvc: DEBUB
+    org.springframework.transaction: DEBUG
+    org.springframework.web.client: DEBUG
+    org.hibernate: DEBUG
+    org.hibernate.search: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type: DEBUG
+    org.hibernate.type.descriptor.sql: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: DEBUG
+    org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: DEBUG
+    org.apache.kafka: DEBUG
+    org.apache.kafka.clients: DEBUG
+    org.springframework.kafka: DEBUG
+    org.apache.zookeeper: DEBUG
+    com.sensiblemetrics.api.common.service: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} [%highlight(%-5.5level)] %cyan(%-56.56logger{56}) - %msg \\(%F:%L\\)#%M%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+#    file: "%d{yyyy-MM-dd HH:mm:ss} <%X{AWSRequestId}> %-5p %c:%L - %m%n
+  path: logs
 ---
 entry: direct:entry
 endpoint: direct:endpoint
 wireTapEndpoint: direct:wireTapEndpoint
-
+---
+spring:
+  # (DataSourceAutoConfiguration & DataSourceProperties)
+  datasource:
+    name: ds-h2
+    url: jdbc:h2:D:/work/workspace/fdata;DATABASE_TO_UPPER=false
+    username: h2
+    password: h2
+    driver-class: org.h2.Driver

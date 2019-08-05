@@ -32,7 +32,7 @@ public class ThreadPoolDispatcher implements Dispatcher {
      * event has been handled by associated handler.
      */
     @Override
-    public void onChannelReadEvent(final AbstractNioChannel channel, final Object readObject final SelectionKey key) {
+    public void onChannelReadEvent(final AbstractNioChannel channel, final Object readObject, final SelectionKey key) {
         this.executorService.execute(() -> channel.getHandler().handleChannelRead(channel, readObject, key));
     }
 
