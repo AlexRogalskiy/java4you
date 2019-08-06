@@ -66,4 +66,5 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires aws.lambda.java.events;
     requires jackson.core;
     requires aws.lambda.java.core;
+    requires json.simple;
 }
