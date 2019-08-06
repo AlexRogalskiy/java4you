@@ -70,7 +70,7 @@
         <joda.time.version>2.10.1</joda.time.version>
         <guava.version>27.1-jre</guava.version>
         <jackson-mapper.version>1.9.13</jackson-mapper.version>
-        <jackson-core.version>2.9.0</jackson-core.version>
+        <jackson-core.version>2.9.9</jackson-core.version>
 
         <aws-lambda-core.version>1.2.0</aws-lambda-core.version>
         <aws-java-sdk-dynamodb.version>1.11.470</aws-java-sdk-dynamodb.version>
@@ -140,7 +140,7 @@
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven-aspectj-plugin.version>1.11</maven-aspectj-plugin.version>
         <maven.liquibase.plugin.version>3.6.2</maven.liquibase.plugin.version>
-        <maven.checkstyle.plugin.lib.version>8.15</maven.checkstyle.plugin.lib.version>
+        <maven.checkstyle.plugin.lib.version>8.18</maven.checkstyle.plugin.lib.version>
         <maven.properties.plugin.version>1.0.0</maven.properties.plugin.version>
         <maven.javadoc.plugin.version>3.1.0</maven.javadoc.plugin.version>
         <maven.jxr.plugin.version>3.0.0</maven.jxr.plugin.version>
@@ -1452,18 +1452,6 @@
             <id>apache.snapshots</id>
             <name>Apache Snapshots</name>
             <url>https://repository.apache.org/content/repositories/snapshots/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-                <updatePolicy>never</updatePolicy>
-                <checksumPolicy>warn</checksumPolicy>
-            </releases>
-        </repository>
-        <repository>
-            <id>Cloudbees snapshots</id>
-            <url>http://repository-estatio.forge.cloudbees.com/snapshot/</url>
             <snapshots>
                 <enabled>true</enabled>
             </snapshots>

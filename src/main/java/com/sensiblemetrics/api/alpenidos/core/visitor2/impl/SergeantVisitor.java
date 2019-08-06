@@ -1,9 +1,9 @@
 package com.sensiblemetrics.api.alpenidos.core.visitor2.impl;
 
-import com.sensiblemetrics.api.alpenidos.core.extension_object.impl.Soldier;
+import com.sensiblemetrics.api.alpenidos.core.visitor2.iface.UnitVisitor;
 import com.sensiblemetrics.api.alpenidos.core.visitor2.unit.Commander;
 import com.sensiblemetrics.api.alpenidos.core.visitor2.unit.Sergeant;
-import com.sensiblemetrics.api.alpenidos.core.visitor2.iface.UnitVisitor;
+import com.sensiblemetrics.api.alpenidos.core.visitor2.unit.Soldier;
 import lombok.extern.slf4j.Slf4j;
 
 /**
