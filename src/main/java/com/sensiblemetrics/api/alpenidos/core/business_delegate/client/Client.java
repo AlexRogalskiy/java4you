@@ -4,7 +4,7 @@ import com.sensiblemetrics.api.alpenidos.core.business_delegate.delegate.Busines
 import lombok.RequiredArgsConstructor;
 
 /**
- * Client utilizes BusinessDelegate to call the business tier
+ * SimpleFactoryPatternLoader utilizes BusinessDelegate to call the business tier
  */
 @RequiredArgsConstructor
 public class Client {

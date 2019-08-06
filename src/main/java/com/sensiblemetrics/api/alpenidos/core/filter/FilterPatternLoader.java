@@ -43,7 +43,7 @@ public class FilterPatternLoader {
         filterManager.addFilter(new DepositFilter());
         filterManager.addFilter(new OrderFilter());
 
-//        Client client = new Client();
+//        SimpleFactoryPatternLoader client = new SimpleFactoryPatternLoader();
 //        client.setFilterManager(filterManager);
     }
 }

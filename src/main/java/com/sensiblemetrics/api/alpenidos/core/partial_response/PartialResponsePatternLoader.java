@@ -11,7 +11,7 @@ import java.util.Map;
 /**
  * The Partial response pattern is a design pattern in which client specifies fields to fetch to serve.
  * Here {@link PartialResponsePatternLoader} is playing as client for {@link VideoResource} server.
- * Client ask for specific fields information in video to server.
+ * SimpleFactoryPatternLoader ask for specific fields information in video to server.
  * <p>
  * <p>
  * {@link VideoResource} act as server to serve video information.

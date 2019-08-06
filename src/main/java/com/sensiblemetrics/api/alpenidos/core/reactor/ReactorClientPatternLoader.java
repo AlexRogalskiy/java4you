@@ -37,10 +37,10 @@ public class ReactorClientPatternLoader {
      */
     public void start() throws IOException {
         log.info("Starting logging clients");
-        this.service.execute(new TcpLoggingClient("Client 1", 6666));
-        this.service.execute(new TcpLoggingClient("Client 2", 6667));
-        this.service.execute(new UdpLoggingClient("Client 3", 6668));
-        this.service.execute(new UdpLoggingClient("Client 4", 6668));
+        this.service.execute(new TcpLoggingClient("SimpleFactoryPatternLoader 1", 6666));
+        this.service.execute(new TcpLoggingClient("SimpleFactoryPatternLoader 2", 6667));
+        this.service.execute(new UdpLoggingClient("SimpleFactoryPatternLoader 3", 6668));
+        this.service.execute(new UdpLoggingClient("SimpleFactoryPatternLoader 4", 6668));
     }
 
     /**

@@ -4,7 +4,7 @@ import com.sensiblemetrics.api.alpenidos.core.ambassador.impl.ServiceAmbassador;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * A simple Client
+ * A simple SimpleFactoryPatternLoader
  */
 @Slf4j
 public class Client {
