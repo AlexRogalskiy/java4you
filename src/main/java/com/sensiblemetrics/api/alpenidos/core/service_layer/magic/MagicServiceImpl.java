@@ -1,11 +1,11 @@
-package service_layer.magic;
+package com.sensiblemetrics.api.alpenidos.core.service_layer.magic;
 
-import service_layer.spell.Spell;
-import service_layer.spell.SpellDao;
-import service_layer.spellbook.Spellbook;
-import service_layer.spellbook.SpellbookDao;
-import service_layer.wizard.Wizard;
-import service_layer.wizard.WizardDao;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spell.Spell;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spell.SpellDao;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.Spellbook;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.SpellbookDao;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.wizard.Wizard;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.wizard.WizardDao;
 
 import java.util.ArrayList;
 import java.util.List;

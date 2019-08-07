@@ -1,9 +1,9 @@
-package service_layer.wizard;
+package com.sensiblemetrics.api.alpenidos.core.service_layer.wizard;
 
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-import service_layer.common.DaoBaseImpl;
-import service_layer.spellbook.Spellbook;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.common.DaoBaseImpl;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.Spellbook;
 
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;

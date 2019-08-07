@@ -1,12 +1,12 @@
-package service_layer.utils;
+package com.sensiblemetrics.api.alpenidos.core.service_layer.utils;
 
 import com.sensiblemetrics.api.alpenidos.core.command2.factory.Wizard;
 import lombok.experimental.UtilityClass;
 import lombok.extern.slf4j.Slf4j;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import service_layer.spell.Spell;
-import service_layer.spellbook.Spellbook;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spell.Spell;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.Spellbook;
 
 /**
  * Produces the Hibernate {@link SessionFactory}.

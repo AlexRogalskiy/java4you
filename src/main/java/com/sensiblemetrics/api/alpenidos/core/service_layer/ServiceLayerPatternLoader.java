@@ -1,17 +1,17 @@
-package service_layer;
+package com.sensiblemetrics.api.alpenidos.core.service_layer;
 
 import lombok.extern.slf4j.Slf4j;
-import service_layer.magic.MagicService;
-import service_layer.magic.MagicServiceImpl;
-import service_layer.spell.Spell;
-import service_layer.spell.SpellDao;
-import service_layer.spell.SpellDaoImpl;
-import service_layer.spellbook.Spellbook;
-import service_layer.spellbook.SpellbookDao;
-import service_layer.spellbook.SpellbookDaoImpl;
-import service_layer.wizard.Wizard;
-import service_layer.wizard.WizardDao;
-import service_layer.wizard.WizardDaoImpl;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.magic.MagicService;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.magic.MagicServiceImpl;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spell.Spell;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spell.SpellDao;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spell.SpellDaoImpl;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.Spellbook;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.SpellbookDao;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.SpellbookDaoImpl;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.wizard.Wizard;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.wizard.WizardDao;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.wizard.WizardDaoImpl;
 
 
 /**

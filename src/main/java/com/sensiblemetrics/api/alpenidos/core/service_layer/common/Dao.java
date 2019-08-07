@@ -1,4 +1,4 @@
-package service_layer.common;
+package com.sensiblemetrics.api.alpenidos.core.service_layer.common;
 
 import java.util.List;
 

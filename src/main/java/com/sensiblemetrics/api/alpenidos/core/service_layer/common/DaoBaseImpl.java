@@ -1,9 +1,9 @@
-package service_layer.common;
+package com.sensiblemetrics.api.alpenidos.core.service_layer.common;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import service_layer.utils.HibernateUtil;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.utils.HibernateUtil;
 
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;

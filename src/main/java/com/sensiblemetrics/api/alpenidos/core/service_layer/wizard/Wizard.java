@@ -1,9 +1,9 @@
-package service_layer.wizard;
+package com.sensiblemetrics.api.alpenidos.core.service_layer.wizard;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import service_layer.common.BaseEntity;
-import service_layer.spellbook.Spellbook;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.common.BaseEntity;
+import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.Spellbook;
 
 import javax.persistence.*;
 import java.util.HashSet;
