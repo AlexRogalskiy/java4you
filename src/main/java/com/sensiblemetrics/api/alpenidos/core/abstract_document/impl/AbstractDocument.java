@@ -13,12 +13,10 @@ import java.util.stream.Stream;
  * Abstract implementation of Document interface
  */
 public abstract class AbstractDocument implements Document {
-
     private final Map<String, Object> properties;
 
     protected AbstractDocument(final Map<String, Object> properties) {
-        Objects.requireNonNull(properties, "Properties map is required");
-        this.properties = properties;
+        this.properties = Objects.requireNonNull(properties, "Properties map is required");
     }
 
     @Override

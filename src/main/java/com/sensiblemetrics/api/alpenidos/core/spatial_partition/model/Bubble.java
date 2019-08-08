@@ -1,6 +1,8 @@
 package com.sensiblemetrics.api.alpenidos.core.spatial_partition.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.ToString;
 import lombok.extern.slf4j.Slf4j;
 
 import java.util.Hashtable;
@@ -13,6 +15,8 @@ import java.util.Random;
  */
 @Slf4j
 @Data
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 public class Bubble extends Point<Bubble> {
     private final int radius;
 

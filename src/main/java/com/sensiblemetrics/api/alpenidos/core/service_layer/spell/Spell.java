@@ -1,9 +1,11 @@
 package com.sensiblemetrics.api.alpenidos.core.service_layer.spell;
 
-import lombok.Data;
-import lombok.NoArgsConstructor;
 import com.sensiblemetrics.api.alpenidos.core.service_layer.common.BaseEntity;
 import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.Spellbook;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 
@@ -12,6 +14,8 @@ import javax.persistence.*;
  */
 @Data
 @Entity
+@EqualsAndHashCode(callSuper = true)
+@ToString(callSuper = true)
 @NoArgsConstructor
 @Table(name = "SPELL")
 public class Spell extends BaseEntity {
