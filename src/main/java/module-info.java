@@ -21,6 +21,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+/*
+ * @author: Alexander Rogalskiy
+ * @title: Design Patterns with Java
+ * @link: https://github.com/AlexRogalskiy/alpenidos-core
+ */
 open module com.sensiblemetrics.api.alpenidos.core {
     requires static lombok;
     requires slf4j.api;
