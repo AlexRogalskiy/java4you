@@ -22,7 +22,7 @@ public class SplitterRoute extends RouteBuilder {
      */
     @Override
     public void configure() {
-        // Main route
+        // TrampolinePatternLoader route
         from("{{entry}}").split().body().to("{{endpoint}}");
     }
 }

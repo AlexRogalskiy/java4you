@@ -22,7 +22,7 @@ public class WireTapRoute extends RouteBuilder {
      */
     @Override
     public void configure() {
-        // Main route
+        // TrampolinePatternLoader route
         from("{{entry}}").wireTap("direct:wireTap").to("{{endpoint}}");
 
         // Wire tap route

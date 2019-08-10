@@ -31,7 +31,7 @@ public class AggregatorRoute extends RouteBuilder {
      */
     @Override
     public void configure() {
-        // Main route
+        // TrampolinePatternLoader route
         from("{{entry}}")
             .aggregate(constant(true), this.aggregator)
             .completionSize(3).completionInterval(2000)

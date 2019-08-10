@@ -72,4 +72,5 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires com.fasterxml.jackson.databind;
     requires com.fasterxml.jackson.core;
     requires com.fasterxml.jackson.annotation;
+    requires cyclops.react;
 }

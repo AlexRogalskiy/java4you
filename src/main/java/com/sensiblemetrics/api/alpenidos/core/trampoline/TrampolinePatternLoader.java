@@ -11,7 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 public class TrampolinePatternLoader {
 
     /**
-     * Main program for showing pattern. It does loop with factorial function.
+     * TrampolinePatternLoader program for showing pattern. It does loop with factorial function.
      */
     public static void main(final String[] args) {
         log.info("start pattern");
