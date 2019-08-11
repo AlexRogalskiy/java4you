@@ -1,0 +1,42 @@
+package com.sensiblemetrics.api.alpenidos.core.labyrinth.impl;
+
+import com.sensiblemetrics.api.alpenidos.core.labyrinth.enums.Action;
+import com.sensiblemetrics.api.alpenidos.core.labyrinth.iface.RobotArtificialIntelligence;
+
+import java.util.Random;
+
+public class LesserDumbBotArtificialIntelligence implements RobotArtificialIntelligence {
+    private boolean isBlocked;
+    private final Random random;
+
+    public LesserDumbBotArtificialIntelligence() {
+        this.isBlocked = false;
+        this.random = new Random();
+    }
+
+    @Override
+    public Action getAction() {
+        if (this.isBlocked) {
+            this.isBlocked = false;
+            switch (this.random.nextInt(3)) {
+                case 0:
+                    return Action.TURN_LEFT;
+                case 1:
+                    return Action.TURN_RIGHT;
+                case 2:
+                default:
+                    return Action.U_TURN;
+            }
+        }
+        return Action.MOVE_FORWARD;
+    }
+
+    @Override
+    public void notifyScanResult(final int distancesToWallsInEachDirection) {
+    }
+
+    @Override
+    public void notifyMoveResult(final boolean hasMoved) {
+        this.isBlocked = !hasMoved;
+    }
+}
