@@ -73,4 +73,7 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires com.fasterxml.jackson.core;
     requires com.fasterxml.jackson.annotation;
     requires cyclops.react;
+    requires httpasyncclient;
+    requires rxjava.apache.http;
+    requires rxjava.core;
 }
