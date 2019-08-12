@@ -76,4 +76,15 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires httpasyncclient;
     requires rxjava.apache.http;
     requires rxjava.core;
+    requires org.aspectj.runtime;
+    requires org.jsoup;
+    requires spring.security.core;
+    requires spring.security.oauth2;
+    requires spring.security.config;
+    requires tomcat.embed.core;
+    requires spring.core;
+    requires mailjet.client;
+    requires json;
+    requires rollbar.java;
+    requires org.apache.httpcomponents.httpclient.fluent;
 }

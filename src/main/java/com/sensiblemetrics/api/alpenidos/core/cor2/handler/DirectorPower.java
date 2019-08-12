@@ -8,7 +8,7 @@ public class DirectorPower extends PurchasePower {
     private static final int ALLOW = BASE * 20;
 
     @Override
-    void handleRequest(final Command command) {
+    public void handleRequest(final Command command) {
         if (command.getAmount() <= ALLOW) {
             log.info("Sale handled by Director");
         } else {

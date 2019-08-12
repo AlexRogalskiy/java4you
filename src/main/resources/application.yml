@@ -34,7 +34,7 @@ logging:
   pattern:
     console: "%d{HH:mm:ss.SSS} [%highlight(%-5.5level)] %cyan(%-56.56logger{56}) - %msg \\(%F:%L\\)#%M%n"
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
-#    file: "%d{yyyy-MM-dd HH:mm:ss} <%X{AWSRequestId}> %-5p %c:%L - %m%n
+  #    file: "%d{yyyy-MM-dd HH:mm:ss} <%X{AWSRequestId}> %-5p %c:%L - %m%n
   path: logs
 ---
 entry: direct:entry
@@ -46,6 +46,35 @@ spring:
   datasource:
     name: ds-h2
     url: jdbc:h2:D:/work/workspace/fdata;DATABASE_TO_UPPER=false
+    #jdbc:hsqldb:file:db/masterdb
     username: h2
     password: h2
     driver-class: org.h2.Driver
+    #org.postgresql.Driver
+    testWhileIdle: true
+    validationQuery: SELECT 1
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        naming:
+          implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+          physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+        dialect: org.hibernate.dialect.MySQL5Dialect
+        #org.hibernate.dialect.HSQLDialect
+        #org.hsqldb.jdbcDriver
+        #org.hibernate.dialect.PostgreSQLDialect
+        temp:
+          use_jdbc_metadata_defaults: false
+        ddl-auto: update
+        show-sql: false
+
+server:
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,text/css,text/javascript,application/javascript:
+
+mailing:
+  enabled: true
