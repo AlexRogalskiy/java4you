@@ -12,9 +12,8 @@ machine:
 #    - echo "oracle-java9-installer shared/accepted-oracle-license-v1-1 seen true" | sudo debconf-set-selections
 #    - sudo apt-get -y install oracle-java9-installer
 #    - sudo apt-get install oracle-java9-set-default
-  java:
-    version: openjdk11
-
+#  java:
+#    version: openjdk11
 version: 2
 jobs:
   build:
@@ -25,8 +24,8 @@ jobs:
       # Customize the JVM maximum heap limit
       _JAVA_OPTIONS: "-Xmx3g"
       MAVEN_OPTS: -Xmx3200m
-#    docker: # run the steps with Docker
-#      - image: circleci/openjdk:11.0.3-jdk-stretch # ...with this image as the primary container; this is where all `steps` will run
+    docker: # run the steps with Docker
+      - image: circleci/openjdk:11.0.3-jdk-stretch
 #      - image: circleci/postgres:12-alpine
 #        environment:
 #          POSTGRES_USER: postgres
