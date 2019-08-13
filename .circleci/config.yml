@@ -18,8 +18,8 @@ version: 2
 jobs:
   build:
     parallelism: 2
-    machine: true
-    working_directory: ~/alpenidos-core
+#    machine: true
+#    working_directory: ~/alpenidos-core
     environment:
       # Customize the JVM maximum heap limit
       _JAVA_OPTIONS: "-Xmx3g"
