@@ -2,7 +2,7 @@
 #
 # Check https://circleci.com/docs/2.0/language-java/ for more details
 #
-machine:
+#machine:
 #  environment:
 #    JAVA_HOME: /usr/lib/jvm/java-9-oracle
 #dependencies:
