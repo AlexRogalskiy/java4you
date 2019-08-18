@@ -87,4 +87,5 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires json;
     requires rollbar.java;
     requires org.apache.httpcomponents.httpclient.fluent;
+    requires java.rmi;
 }

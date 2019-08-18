@@ -17,7 +17,6 @@ public interface GraphTraversalService extends Remote {
      * @param destinationUnLocode destination UN Locode
      * @param limitations         restrictions on the path selection, as key-value according to some API specification
      * @return A list of transit paths
-     * @throws RemoteException RMI problem
      */
     Iterable<TransitPath> findShortestPath(final String originUnLocode, final String destinationUnLocode, final Properties limitations) throws RemoteException;
 }
