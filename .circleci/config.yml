@@ -64,11 +64,11 @@ jobs:
           path: build/test-results/test
           when: always
 
-      - run: mkdir jar_files && cp target/*.jar jar_files/
-      - store_artifacts:
-          name: "Saving JAR files"
-          path: jar_files
-          destination: jar-files/
+#      - run: mkdir jar_files && cp target/*.jar jar_files/
+#      - store_artifacts:
+#          name: "Saving JAR files"
+#          path: jar_files
+#          destination: jar-files/
 
 workflows:
   version: 2
