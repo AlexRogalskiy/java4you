@@ -41,7 +41,7 @@ jobs:
 
       - run:
           name: Run build in parallel
-          command: mvn -U -B -V --fail-at-end -Dfile.encoding=UTF-8 -DskipTests=true -Dmaven.javadoc.skip=true -DskipCheckStyle=true clean install -P update-sourcepath-for-lombok
+          command: mvn -U -B -V --fail-at-end -Dgpg.skip=true -Dfile.encoding=UTF-8 -DskipTests=true -Dmaven.javadoc.skip=true -DskipCheckStyle=true clean install -P update-sourcepath-for-lombok
       - save_cache:
           paths:
             - ~/.m2
