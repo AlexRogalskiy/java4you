@@ -83,6 +83,7 @@ notifications:
   email:
     on_success: change
     on_failure: always
+    use_notice: true
     recipients:
       - alexander.rogalsky@yandex.ru
 
