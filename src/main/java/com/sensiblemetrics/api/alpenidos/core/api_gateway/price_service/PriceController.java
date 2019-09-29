@@ -1,7 +1,6 @@
 package com.sensiblemetrics.api.alpenidos.core.api_gateway.price_service;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,7 +14,7 @@ public class PriceController {
      *
      * @return A product's price
      */
-    @RequestMapping(value = "/price", method = RequestMethod.GET)
+    @GetMapping("/price")
     public String getPrice() {
         return "20";
     }

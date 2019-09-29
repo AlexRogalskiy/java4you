@@ -24,7 +24,7 @@ public class LambdaInfoApiHandler implements RequestHandler<Map<String, Object>,
             .ApiGatewayResponseBuilder<LambdaInfo>()
             .headers(headers())
             .statusCode(SUCCESS_STATUS_CODE)
-            .body(lambdaInfo(context))
+            .body(this.lambdaInfo(context))
             .build();
     }
 

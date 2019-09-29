@@ -7,9 +7,9 @@ import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayProxyResponseEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.ImmutableMap;
 
 import java.io.Serializable;
-import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -27,11 +27,10 @@ public abstract class AbstractDynamoDbHandler<T extends Serializable> {
     }
 
     private void initAmazonDynamoDb() {
-        AmazonDynamoDB amazonDynamoDb = AmazonDynamoDBClientBuilder
+        final AmazonDynamoDB amazonDynamoDb = AmazonDynamoDBClientBuilder
             .standard()
             .withRegion(Regions.US_EAST_1)
             .build();
-
         this.dynamoDbMapper = new DynamoDBMapper(amazonDynamoDb);
     }
 
@@ -48,10 +47,9 @@ public abstract class AbstractDynamoDbHandler<T extends Serializable> {
     }
 
     protected Map<String, String> headers() {
-        Map<String, String> headers = new HashMap<>();
-        headers.put("Content-Type", "application/json");
-
-        return headers;
+        return ImmutableMap.<String, String>builder()
+            .put("Content-Type", "application/json")
+            .build();
     }
 
     /**
@@ -61,16 +59,16 @@ public abstract class AbstractDynamoDbHandler<T extends Serializable> {
      * @param body       - Object body
      * @return - api gateway proxy response
      */
-    protected APIGatewayProxyResponseEvent apiGatewayProxyResponseEvent(Integer statusCode, T body) {
+    protected APIGatewayProxyResponseEvent apiGatewayProxyResponseEvent(final Integer statusCode, final T body) {
         final APIGatewayProxyResponseEvent apiGatewayProxyResponseEvent = new APIGatewayProxyResponseEvent().withHeaders(headers());
         try {
             apiGatewayProxyResponseEvent
                 .withStatusCode(statusCode)
                 .withBody(getObjectMapper()
-                    .writeValueAsString(body));
-
-        } catch (JsonProcessingException jsonProcessingException) {
-            throw new RuntimeException(jsonProcessingException);
+                    .writeValueAsString(body)
+                );
+        } catch (JsonProcessingException ex) {
+            throw new IllegalArgumentException(ex);
         }
         return apiGatewayProxyResponseEvent;
     }

@@ -65,7 +65,7 @@ public class App {
     /**
      * Read-through and write-through
      */
-    public void useReadAndWriteThroughStrategy() {
+    private void useReadAndWriteThroughStrategy() {
         log.info("# CachingPolicy.THROUGH");
         AppManager.initCachingPolicy(CachingPolicy.THROUGH);
 
@@ -80,7 +80,7 @@ public class App {
     /**
      * Read-through and write-around
      */
-    public void useReadThroughAndWriteAroundStrategy() {
+    private void useReadThroughAndWriteAroundStrategy() {
         log.info("# CachingPolicy.AROUND");
         AppManager.initCachingPolicy(CachingPolicy.AROUND);
 
@@ -104,7 +104,7 @@ public class App {
     /**
      * Read-through and write-behind
      */
-    public void useReadThroughAndWriteBehindStrategy() {
+    private void useReadThroughAndWriteBehindStrategy() {
         log.info("# CachingPolicy.BEHIND");
         AppManager.initCachingPolicy(CachingPolicy.BEHIND);
 
@@ -131,7 +131,7 @@ public class App {
     /**
      * Cache-Aside
      */
-    public void useCacheAsideStategy() {
+    private void useCacheAsideStategy() {
         log.info("# CachingPolicy.ASIDE");
         AppManager.initCachingPolicy(CachingPolicy.ASIDE);
         log.info(AppManager.printCacheContent());

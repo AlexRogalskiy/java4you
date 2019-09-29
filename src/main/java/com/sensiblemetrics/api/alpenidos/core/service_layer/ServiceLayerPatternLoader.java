@@ -1,6 +1,5 @@
 package com.sensiblemetrics.api.alpenidos.core.service_layer;
 
-import lombok.extern.slf4j.Slf4j;
 import com.sensiblemetrics.api.alpenidos.core.service_layer.magic.MagicService;
 import com.sensiblemetrics.api.alpenidos.core.service_layer.magic.MagicServiceImpl;
 import com.sensiblemetrics.api.alpenidos.core.service_layer.spell.Spell;
@@ -12,6 +11,7 @@ import com.sensiblemetrics.api.alpenidos.core.service_layer.spellbook.SpellbookD
 import com.sensiblemetrics.api.alpenidos.core.service_layer.wizard.Wizard;
 import com.sensiblemetrics.api.alpenidos.core.service_layer.wizard.WizardDao;
 import com.sensiblemetrics.api.alpenidos.core.service_layer.wizard.WizardDaoImpl;
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
@@ -49,7 +49,7 @@ public class ServiceLayerPatternLoader {
     /**
      * Initialize data
      */
-    public static void initData() {
+    private static void initData() {
         // spells
         final Spell spell1 = new Spell("Ice dart");
         final Spell spell2 = new Spell("Invisibility");
@@ -165,7 +165,7 @@ public class ServiceLayerPatternLoader {
     /**
      * Query the data
      */
-    public static void queryData() {
+    private static void queryData() {
         final MagicService service = new MagicServiceImpl(
             new WizardDaoImpl(),
             new SpellbookDaoImpl(),

@@ -15,6 +15,6 @@ public class AppConfig {
     }
 
     public AppConfig() {
-        configureUTC();
+        this.configureUTC();
     }
 }

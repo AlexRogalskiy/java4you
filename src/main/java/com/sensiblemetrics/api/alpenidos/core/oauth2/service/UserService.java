@@ -26,16 +26,16 @@ public class UserService {
         if (user == null) {
             user = new User(email, hashPassword(password), new ArrayList<>(), true);
             addRoleToUser(user, ROLE_USER);
-            userRepository.save(user);
+            this.userRepository.save(user);
             return user;
         }
         return null;
     }
 
     private void addRoleToUser(User user, String roleStr) {
-        Role role = roleService.findByRole(roleStr);
+        Role role = this.roleService.findByRole(roleStr);
         if (role == null) {
-            role = roleService.saveRole(roleStr);
+            role = this.roleService.saveRole(roleStr);
         }
         user.getRoles().add(role);
     }

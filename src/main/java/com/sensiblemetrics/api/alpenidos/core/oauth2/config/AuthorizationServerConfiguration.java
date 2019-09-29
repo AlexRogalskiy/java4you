@@ -32,9 +32,9 @@ public class AuthorizationServerConfiguration extends AuthorizationServerConfigu
 
     @Override
     public void configure(final AuthorizationServerEndpointsConfigurer configurer) {
-        configurer.tokenStore(tokenStore());
-        configurer.authenticationManager(authenticationManager);
-        configurer.userDetailsService(userDetailsService);
+        configurer.tokenStore(this.tokenStore());
+        configurer.authenticationManager(this.authenticationManager);
+        configurer.userDetailsService(this.userDetailsService);
     }
 
     @Override

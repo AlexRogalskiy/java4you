@@ -1,7 +1,6 @@
 package com.sensiblemetrics.api.alpenidos.core.api_gateway.image_service;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -15,7 +14,7 @@ public class ImageController {
      *
      * @return An image path
      */
-    @RequestMapping(value = "/image-path", method = RequestMethod.GET)
+    @GetMapping("/image-path")
     public String getImagePath() {
         return "/product-image.png";
     }

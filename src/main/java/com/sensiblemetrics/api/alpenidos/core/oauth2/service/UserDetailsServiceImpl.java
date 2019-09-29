@@ -22,7 +22,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     private final UserService userService;
 
     @Override
-    public UserDetails loadUserByUsername(final String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(final String username) {
         final com.sensiblemetrics.api.alpenidos.core.oauth2.model.User dbUser = this.userService.findByEmail(username);
         if (dbUser == null) {
             throw new UsernameNotFoundException(String.format("User '%s' can not be found", username));
@@ -30,10 +30,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         return new User(dbUser.getEmail(), dbUser.getPassword(), dbUser.isActive(), true, true, true, this.loadAuthorities(dbUser));
     }
 
-    public Collection<GrantedAuthority> loadAuthorities(final com.sensiblemetrics.api.alpenidos.core.oauth2.model.User user) {
+    private Collection<GrantedAuthority> loadAuthorities(final com.sensiblemetrics.api.alpenidos.core.oauth2.model.User user) {
         final Collection<Role> userAuthorities = user.getRoles();
-        final Collection<GrantedAuthority> authorities = userAuthorities.stream().map(userAuthority -> new SimpleGrantedAuthority(userAuthority.getRole())).collect(Collectors.toCollection(ArrayList::new));
-        return authorities;
+        return userAuthorities.stream().map(userAuthority -> new SimpleGrantedAuthority(userAuthority.getRole())).collect(Collectors.toCollection(ArrayList::new));
     }
 
 }

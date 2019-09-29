@@ -9,5 +9,5 @@ import com.sensiblemetrics.api.alpenidos.core.ambassador.impl.ServiceAmbassador;
 public interface RemoteServiceInterface {
     int FAILURE = -1;
 
-    long doRemoteFunction(int value) throws Exception;
+    long doRemoteFunction(final int value) throws Exception;
 }
