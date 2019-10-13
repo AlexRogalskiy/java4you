@@ -5,7 +5,6 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 import java.util.concurrent.TimeUnit;
-import java.util.concurrent.TimeoutException;
 
 /**
  * A really simplified implementation of future that allows completing it successfully with a value
@@ -72,7 +71,7 @@ public class PromiseSupport<T> implements Future<T> {
     }
 
     @Override
-    public T get(final long timeout, final TimeUnit unit) throws ExecutionException, TimeoutException {
+    public T get(final long timeout, final TimeUnit unit) throws ExecutionException {
         synchronized (this.lock) {
             while (state == RUNNING) {
                 try {
