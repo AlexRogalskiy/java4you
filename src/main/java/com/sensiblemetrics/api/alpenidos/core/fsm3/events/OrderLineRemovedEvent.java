@@ -1,9 +1,9 @@
 package com.sensiblemetrics.api.alpenidos.core.fsm3.events;
 
-import com.sensiblemetrics.api.alpenidos.core.fsm3.OrderIdentifier;
-import com.sensiblemetrics.api.alpenidos.core.fsm3.OrderLine;
-import com.sensiblemetrics.api.alpenidos.core.fsm3.OrderLineIdentifier;
-import com.sensiblemetrics.api.alpenidos.core.fsm3.OrderStatus;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.OrderIdentifier;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.OrderLine;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.OrderLineIdentifier;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.OrderStatus;
 
 import static java.util.Objects.requireNonNull;
 

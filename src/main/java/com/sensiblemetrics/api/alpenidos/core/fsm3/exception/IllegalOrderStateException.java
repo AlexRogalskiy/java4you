@@ -1,4 +1,6 @@
-package com.sensiblemetrics.api.alpenidos.core.fsm3;
+package com.sensiblemetrics.api.alpenidos.core.fsm3.exception;
+
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.Order;
 
 import static java.util.Objects.requireNonNull;
 

@@ -1,18 +1,18 @@
-package com.sensiblemetrics.api.alpenidos.core.fsm3;
+package com.sensiblemetrics.api.alpenidos.core.fsm3.model;
 
 import static java.util.Objects.requireNonNull;
 
 import java.util.Objects;
 
-public class OrderLineIdentifier {
+public class OrderLine {
 
-    private String identifier;
+    private OrderLineIdentifier identifier;
 
-    public OrderLineIdentifier(String identifier) {
+    public OrderLine(OrderLineIdentifier identifier) {
         this.identifier = requireNonNull(identifier);
     }
 
-    public String getIdentifier() {
+    public OrderLineIdentifier getIdentifier() {
         return identifier;
     }
 
@@ -32,13 +32,8 @@ public class OrderLineIdentifier {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        OrderLineIdentifier that = (OrderLineIdentifier) obj;
+        OrderLine that = (OrderLine) obj;
         return Objects.equals(this.identifier, that.identifier);
-    }
-
-    @Override
-    public String toString() {
-        return identifier;
     }
 
 }

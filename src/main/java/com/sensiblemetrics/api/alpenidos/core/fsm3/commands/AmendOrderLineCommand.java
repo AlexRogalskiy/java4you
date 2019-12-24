@@ -1,7 +1,7 @@
 package com.sensiblemetrics.api.alpenidos.core.fsm3.commands;
 
-import com.sensiblemetrics.api.alpenidos.core.fsm3.OrderLine;
-import com.sensiblemetrics.api.alpenidos.core.fsm3.OrderLineIdentifier;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.OrderLine;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.OrderLineIdentifier;
 
 import static java.util.Objects.requireNonNull;
 

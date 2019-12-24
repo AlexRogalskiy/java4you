@@ -1,6 +1,9 @@
-package com.sensiblemetrics.api.alpenidos.core.fsm3;
+package com.sensiblemetrics.api.alpenidos.core.fsm3.state;
 
-import design.fsm.commands.AmendOrderLineCommand;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.exception.IllegalOrderStateException;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.commands.AmendOrderLineCommand;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.Order;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.model.OrderDetails;
 
 public class OrderStateAdapter implements OrderState {
 
@@ -10,7 +13,7 @@ public class OrderStateAdapter implements OrderState {
     }
 
     @Override
-    public void open(Order order) {
+    public void open(final Order order) {
         throw new IllegalOrderStateException(order, "open");
     }
 
@@ -20,7 +23,7 @@ public class OrderStateAdapter implements OrderState {
     }
 
     @Override
-    public void close(Order order) {
+    public void close(final Order order) {
         throw new IllegalOrderStateException(order, "close");
     }
 
@@ -30,7 +33,7 @@ public class OrderStateAdapter implements OrderState {
     }
 
     @Override
-    public void suspend(Order order, String reason) {
+    public void suspend(final Order order, final String reason) {
         throw new IllegalOrderStateException(order, "suspend");
     }
 
@@ -40,7 +43,7 @@ public class OrderStateAdapter implements OrderState {
     }
 
     @Override
-    public void resume(Order order) {
+    public void resume(final Order order) {
         throw new IllegalOrderStateException(order, "resume");
     }
 
@@ -50,7 +53,7 @@ public class OrderStateAdapter implements OrderState {
     }
 
     @Override
-    public void cancel(Order order, String reason) {
+    public void cancel(final Order order, final String reason) {
         throw new IllegalOrderStateException(order, "cancel");
     }
 
@@ -60,7 +63,7 @@ public class OrderStateAdapter implements OrderState {
     }
 
     @Override
-    public void update(Order order, OrderDetails details) {
+    public void update(final Order order, final OrderDetails details) {
         throw new IllegalOrderStateException(order, "update");
     }
 
@@ -80,7 +83,7 @@ public class OrderStateAdapter implements OrderState {
     }
 
     @Override
-    public void requestForInformation(Order order, String request) {
+    public void requestForInformation(final Order order, final String request) {
         throw new IllegalOrderStateException(order, "request for information");
     }
 
@@ -90,8 +93,7 @@ public class OrderStateAdapter implements OrderState {
     }
 
     @Override
-    public void amendOrderLine(Order order, AmendOrderLineCommand command) {
+    public void amendOrderLine(final Order order, final AmendOrderLineCommand command) {
         throw new IllegalOrderStateException(order, "amend order line");
     }
-
 }

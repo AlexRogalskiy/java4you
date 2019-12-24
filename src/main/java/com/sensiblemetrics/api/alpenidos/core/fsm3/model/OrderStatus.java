@@ -1,6 +1,7 @@
-package com.sensiblemetrics.api.alpenidos.core.fsm3;
+package com.sensiblemetrics.api.alpenidos.core.fsm3.model;
 
 import com.sensiblemetrics.api.alpenidos.core.fsm3.commands.AmendOrderLineCommand;
+import com.sensiblemetrics.api.alpenidos.core.fsm3.state.*;
 
 public enum OrderStatus implements OrderState {
 

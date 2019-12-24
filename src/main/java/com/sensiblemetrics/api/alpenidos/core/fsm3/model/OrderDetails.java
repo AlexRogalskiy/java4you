@@ -1,4 +1,4 @@
-package com.sensiblemetrics.api.alpenidos.core.fsm3;
+package com.sensiblemetrics.api.alpenidos.core.fsm3.model;
 
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
