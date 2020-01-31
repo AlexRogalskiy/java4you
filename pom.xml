@@ -161,7 +161,7 @@
         <maven.checkstyle.plugin.version>3.0.0</maven.checkstyle.plugin.version>
         <maven-aspectj-plugin.version>1.11</maven-aspectj-plugin.version>
         <maven.liquibase.plugin.version>3.6.2</maven.liquibase.plugin.version>
-        <maven.checkstyle.plugin.lib.version>8.18</maven.checkstyle.plugin.lib.version>
+        <maven.checkstyle.plugin.lib.version>8.29</maven.checkstyle.plugin.lib.version>
         <maven.properties.plugin.version>1.0.0</maven.properties.plugin.version>
         <maven.javadoc.plugin.version>3.1.0</maven.javadoc.plugin.version>
         <maven.jxr.plugin.version>3.0.0</maven.jxr.plugin.version>
