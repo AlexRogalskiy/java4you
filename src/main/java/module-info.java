@@ -88,4 +88,6 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires rollbar.java;
     requires org.apache.httpcomponents.httpclient.fluent;
     requires java.rmi;
+    requires camel.core.model;
+    requires camel.core.engine;
 }

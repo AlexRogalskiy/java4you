@@ -1,3 +1,3 @@
-# Java4you guide
+# Java Design Patterns guide
 
-Java design patterns and architectural concepts
+Java design patterns, architectural concepts and useful algorithmic models
