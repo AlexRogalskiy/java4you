@@ -11,6 +11,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @RequiredArgsConstructor
 public class Consumer {
+
     private final String name;
     private final MqSubscribePoint queue;
 

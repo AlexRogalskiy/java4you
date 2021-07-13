@@ -13,6 +13,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public abstract class AbstractCreature implements Creature {
+
     private String name;
     private Size size;
     private Movement movement;

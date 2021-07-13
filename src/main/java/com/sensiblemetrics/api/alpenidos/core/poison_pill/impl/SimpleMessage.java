@@ -1,17 +1,17 @@
 package com.sensiblemetrics.api.alpenidos.core.poison_pill.impl;
 
 import com.sensiblemetrics.api.alpenidos.core.poison_pill.iface.Message;
-import lombok.Data;
-
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import lombok.Data;
 
 /**
  * {@link Message} basic implementation
  */
 @Data
 public class SimpleMessage implements Message {
+
     private final Map<Headers, String> headers = new HashMap<>();
     private String body;
 

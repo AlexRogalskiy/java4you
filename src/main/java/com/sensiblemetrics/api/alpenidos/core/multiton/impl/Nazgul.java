@@ -1,11 +1,11 @@
 package com.sensiblemetrics.api.alpenidos.core.multiton.impl;
 
 import com.sensiblemetrics.api.alpenidos.core.multiton.enums.NazgulName;
-import lombok.Data;
-import lombok.RequiredArgsConstructor;
-
+import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import lombok.Data;
+import lombok.RequiredArgsConstructor;
 
 /**
  * Nazgul is a Multiton class. Nazgul instances can be queried using {@link #getInstance} method.
@@ -13,12 +13,13 @@ import java.util.concurrent.ConcurrentHashMap;
 @Data
 @RequiredArgsConstructor
 public final class Nazgul {
+
     private static Map<NazgulName, Nazgul> nazguls;
 
     private final NazgulName name;
 
     static {
-        nazguls = new ConcurrentHashMap<>();
+        final Map<NazgulName, Nazgul> map = new ConcurrentHashMap<>();
         nazguls.put(NazgulName.KHAMUL, new Nazgul(NazgulName.KHAMUL));
         nazguls.put(NazgulName.MURAZOR, new Nazgul(NazgulName.MURAZOR));
         nazguls.put(NazgulName.DWAR, new Nazgul(NazgulName.DWAR));
@@ -28,6 +29,8 @@ public final class Nazgul {
         nazguls.put(NazgulName.ADUNAPHEL, new Nazgul(NazgulName.ADUNAPHEL));
         nazguls.put(NazgulName.REN, new Nazgul(NazgulName.REN));
         nazguls.put(NazgulName.UVATHA, new Nazgul(NazgulName.UVATHA));
+
+        nazguls = Collections.unmodifiableMap(map);
     }
 
     public static Nazgul getInstance(final NazgulName name) {

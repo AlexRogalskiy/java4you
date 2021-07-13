@@ -4,23 +4,22 @@ import com.sensiblemetrics.api.alpenidos.core.servant.iface.Royalty;
 import com.sensiblemetrics.api.alpenidos.core.servant.impl.King;
 import com.sensiblemetrics.api.alpenidos.core.servant.impl.Queen;
 import com.sensiblemetrics.api.alpenidos.core.servant.impl.Servant;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 
 
 /**
- * Servant offers some functionality to a group of classes without defining that functionality in
- * each of them. A Servant is a class whose instance provides methods that take care of a desired
- * service, while objects for which the servant does something, are taken as parameters.
+ * Servant offers some functionality to a group of classes without defining that functionality in each of them. A Servant is a class whose instance provides
+ * methods that take care of a desired service, while objects for which the servant does something, are taken as parameters.
  * <p>
  * In this example {@link Servant} is serving {@link King} and {@link Queen}.
  */
 @Slf4j
 public class ServantPatternLoader {
-    private static Servant jenkins = new Servant("Jenkins");
-    private static Servant travis = new Servant("Travis");
+
+    private static final Servant jenkins = new Servant("Jenkins");
+    private static final Servant travis = new Servant("Travis");
 
     /**
      * Program entry point

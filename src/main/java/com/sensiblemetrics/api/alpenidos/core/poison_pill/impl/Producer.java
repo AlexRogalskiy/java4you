@@ -2,18 +2,17 @@ package com.sensiblemetrics.api.alpenidos.core.poison_pill.impl;
 
 import com.sensiblemetrics.api.alpenidos.core.poison_pill.iface.Message;
 import com.sensiblemetrics.api.alpenidos.core.poison_pill.iface.MqPublishPoint;
+import java.util.Date;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.Date;
-
 /**
- * Class responsible for producing unit of work that can be expressed as message and submitted to
- * queue
+ * Class responsible for producing unit of work that can be expressed as message and submitted to queue
  */
 @Slf4j
 @RequiredArgsConstructor
 public class Producer {
+
     private final String name;
     private final MqPublishPoint queue;
     private boolean isStopped;

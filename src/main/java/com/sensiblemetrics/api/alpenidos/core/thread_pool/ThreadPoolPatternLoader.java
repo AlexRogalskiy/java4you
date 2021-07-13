@@ -4,25 +4,20 @@ import com.sensiblemetrics.api.alpenidos.core.thread_pool.factory.Worker;
 import com.sensiblemetrics.api.alpenidos.core.thread_pool.impl.CoffeeMakingTask;
 import com.sensiblemetrics.api.alpenidos.core.thread_pool.impl.PotatoPeelingTask;
 import com.sensiblemetrics.api.alpenidos.core.thread_pool.impl.Task;
-import lombok.extern.slf4j.Slf4j;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import lombok.extern.slf4j.Slf4j;
 
 /**
- * Thread Pool pattern is where a number of threads are created to perform a number of tasks, which
- * are usually organized in a queue. The results from the tasks being executed might also be placed
- * in a queue, or the tasks might return no result. Typically, there are many more tasks than
- * threads. As soon as a thread completes its task, it will request the next task from the queue
- * until all tasks have been completed. The thread can then terminate, or sleep until there are new
- * tasks available.
+ * Thread Pool pattern is where a number of threads are created to perform a number of tasks, which are usually organized in a queue. The results from the tasks
+ * being executed might also be placed in a queue, or the tasks might return no result. Typically, there are many more tasks than threads. As soon as a thread
+ * completes its task, it will request the next task from the queue until all tasks have been completed. The thread can then terminate, or sleep until there are
+ * new tasks available.
  * <p>
- * In this example we create a list of tasks presenting work to be done. Each task is then wrapped
- * into a {@link Worker} object that implements {@link Runnable}. We create an
- * {@link ExecutorService} with fixed number of threads (Thread Pool) and use them to execute the
- * {@link Worker}s.
+ * In this example we create a list of tasks presenting work to be done. Each task is then wrapped into a {@link Worker} object that implements {@link
+ * Runnable}. We create an {@link ExecutorService} with fixed number of threads (Thread Pool) and use them to execute the {@link Worker}s.
  */
 @Slf4j
 public class ThreadPoolPatternLoader {
@@ -62,15 +57,17 @@ public class ThreadPoolPatternLoader {
         // Allocate new worker for each task
         // The worker is executed when a thread becomes
         // available in the thread pool
-        for (int i = 0; i < tasks.size(); i++) {
-            final Runnable worker = new Worker(tasks.get(i));
+        for (final Task task : tasks) {
+            final Runnable worker = new Worker(task);
             executor.execute(worker);
         }
+
         // All tasks were executed, now shutdown
         executor.shutdown();
         while (!executor.isTerminated()) {
             Thread.yield();
         }
+
         log.info("Program finished");
     }
 }

@@ -1,15 +1,15 @@
 package com.sensiblemetrics.api.alpenidos.core.servant.impl;
 
 import com.sensiblemetrics.api.alpenidos.core.servant.iface.Royalty;
-import lombok.RequiredArgsConstructor;
-
 import java.util.List;
+import lombok.RequiredArgsConstructor;
 
 /**
  * Servant
  */
 @RequiredArgsConstructor
 public class Servant {
+
     public final String name;
 
     public void feed(final Royalty r) {

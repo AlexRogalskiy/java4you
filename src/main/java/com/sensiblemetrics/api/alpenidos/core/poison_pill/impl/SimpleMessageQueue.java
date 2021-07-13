@@ -2,7 +2,6 @@ package com.sensiblemetrics.api.alpenidos.core.poison_pill.impl;
 
 import com.sensiblemetrics.api.alpenidos.core.poison_pill.iface.Message;
 import com.sensiblemetrics.api.alpenidos.core.poison_pill.iface.MessageQueue;
-
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
@@ -10,6 +9,7 @@ import java.util.concurrent.BlockingQueue;
  * Bounded blocking queue wrapper
  */
 public class SimpleMessageQueue implements MessageQueue {
+
     private final BlockingQueue<Message> queue;
 
     public SimpleMessageQueue(final int bound) {

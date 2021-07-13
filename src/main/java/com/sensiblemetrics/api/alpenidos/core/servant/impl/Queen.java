@@ -6,6 +6,7 @@ import com.sensiblemetrics.api.alpenidos.core.servant.iface.Royalty;
  * Queen
  */
 public class Queen implements Royalty {
+
     private boolean isDrunk = true;
     private boolean isHungry;
     private boolean isHappy;

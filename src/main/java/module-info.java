@@ -90,4 +90,5 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires java.rmi;
     requires camel.core.model;
     requires camel.core.engine;
+    requires cglib;
 }
