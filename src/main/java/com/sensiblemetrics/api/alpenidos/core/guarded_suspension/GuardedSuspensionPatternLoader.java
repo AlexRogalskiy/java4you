@@ -1,7 +1,6 @@
 package com.sensiblemetrics.api.alpenidos.core.guarded_suspension;
 
 import com.sensiblemetrics.api.alpenidos.core.guarded_suspension.impl.GuardedQueue;
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
@@ -18,10 +17,7 @@ public class GuardedSuspensionPatternLoader {
         final ExecutorService executorService = Executors.newFixedThreadPool(3);
 
         //here we create first thread which is supposed to get from guardedQueue
-        executorService.execute(() -> {
-                guardedQueue.get();
-            }
-        );
+        executorService.execute(guardedQueue::get);
 
         //here we wait two seconds to show that the thread which is trying to get from guardedQueue will be waiting
         try {
