@@ -89,6 +89,7 @@
         <joda.time.version>2.10.1</joda.time.version>
         <guava.version>27.1-jre</guava.version>
         <cglib.version>3.3.0</cglib.version>
+        <vavr.version>0.10.0</vavr.version>
         <jackson-mapper.version>1.9.13</jackson-mapper.version>
         <jackson-core.version>2.12.1</jackson-core.version>
         <json-simple.version>1.1.1</json-simple.version>
@@ -1889,6 +1890,13 @@
             <groupId>cglib</groupId>
             <artifactId>cglib</artifactId>
             <version>${cglib.version}</version>
+        </dependency>
+
+        <!-- Vavr library dependencies  -->
+        <dependency>
+            <groupId>io.vavr</groupId>
+            <artifactId>vavr</artifactId>
+            <version>${vavr.version}</version>
         </dependency>
 
         <!-- Google Json library dependencies -->

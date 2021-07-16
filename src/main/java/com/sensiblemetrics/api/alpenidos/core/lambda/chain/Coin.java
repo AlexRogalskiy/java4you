@@ -1,4 +1,4 @@
-package com.sensiblemetrics.api.alpenidos.core.lambda.coin;
+package com.sensiblemetrics.api.alpenidos.core.lambda.chain;
 
 public enum Coin {
     _1, _2, _5, ILLEGAL_COIN;

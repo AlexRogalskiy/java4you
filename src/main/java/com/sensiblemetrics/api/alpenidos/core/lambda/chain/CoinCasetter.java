@@ -1,4 +1,4 @@
-package com.sensiblemetrics.api.alpenidos.core.lambda.coin;
+package com.sensiblemetrics.api.alpenidos.core.lambda.chain;
 
 class CoinCasetter {
 

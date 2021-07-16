@@ -91,4 +91,5 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires camel.core.model;
     requires camel.core.engine;
     requires cglib;
+    requires io.vavr;
 }
