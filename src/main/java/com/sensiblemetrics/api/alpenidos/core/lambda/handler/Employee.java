@@ -1,4 +1,4 @@
-package com.sensiblemetrics.api.alpenidos.core.lambda;
+package com.sensiblemetrics.api.alpenidos.core.lambda.handler;
 
 import lombok.Data;
 

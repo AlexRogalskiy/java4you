@@ -1,4 +1,4 @@
-package com.sensiblemetrics.api.alpenidos.core.lambda;
+package com.sensiblemetrics.api.alpenidos.core.lambda.handler;
 
 import com.amazonaws.services.lambda.runtime.Context;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
