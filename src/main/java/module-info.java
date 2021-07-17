@@ -93,4 +93,5 @@ open module com.sensiblemetrics.api.alpenidos.core {
     requires cglib;
     requires io.vavr;
     requires jdk.unsupported;
+    requires netty.all;
 }

@@ -90,6 +90,7 @@
         <guava.version>27.1-jre</guava.version>
         <cglib.version>3.3.0</cglib.version>
         <vavr.version>0.10.0</vavr.version>
+        <netty.version>5.0.0.Alpha2</netty.version>
         <jackson-mapper.version>1.9.13</jackson-mapper.version>
         <jackson-core.version>2.12.1</jackson-core.version>
         <json-simple.version>1.1.1</json-simple.version>
@@ -1897,6 +1898,13 @@
             <groupId>io.vavr</groupId>
             <artifactId>vavr</artifactId>
             <version>${vavr.version}</version>
+        </dependency>
+
+        <!-- Netty library dependencies  -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty.version}</version>
         </dependency>
 
         <!-- Google Json library dependencies -->
