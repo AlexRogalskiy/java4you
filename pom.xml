@@ -149,7 +149,7 @@
         <maven.release.plugin.version>2.5.3</maven.release.plugin.version>
         <maven.scm.proficer.gitexe.version>1.10.0</maven.scm.proficer.gitexe.version>
         <maven.nexus-staging.plugin.version>1.6.8</maven.nexus-staging.plugin.version>
-        <maven.dockerfile.plugin.version>1.4.10</maven.dockerfile.plugin.version>
+        <maven.dockerfile.plugin.version>1.4.13</maven.dockerfile.plugin.version>
         <maven.source.plugin.version>3.0.1</maven.source.plugin.version>
         <maven.dependency.plugin.version>3.1.1</maven.dependency.plugin.version>
         <maven.apache.rat.plugin.version>0.13</maven.apache.rat.plugin.version>
