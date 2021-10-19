@@ -51,7 +51,7 @@
         <spring-boot-starter-security.version>2.1.3.RELEASE</spring-boot-starter-security.version>
         <spring-security-test.version>5.1.5.RELEASE</spring-security-test.version>
 
-        <camel.version>3.11.0</camel.version>
+        <camel.version>3.12.0</camel.version>
         <camel-spring-boot.version>3.0.1</camel-spring-boot.version>
         <rollbar.version>1.4.1</rollbar.version>
 
