@@ -79,7 +79,7 @@
         <jsoup.version>1.12.1</jsoup.version>
         <mailjet-client.version>4.1.1</mailjet-client.version>
 
-        <reactivex.rxjava2.version>2.2.7</reactivex.rxjava2.version>
+        <reactivex.rxjava2.version>2.2.21</reactivex.rxjava2.version>
         <reactive-streams.version>1.0.2</reactive-streams.version>
         <rxjava-apache-http.version>0.20.7</rxjava-apache-http.version>
         <cyclops-react.version>2.1.1</cyclops-react.version>
