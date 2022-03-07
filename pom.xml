@@ -158,7 +158,7 @@
         <maven.sonar.plugin.version>3.6.0.1398</maven.sonar.plugin.version>
         <maven.scm.plugin.version>1.11.2</maven.scm.plugin.version>
         <maven.deploy.plugin.version>2.8.2</maven.deploy.plugin.version>
-        <maven.spotbugs.plugin.version>3.1.11</maven.spotbugs.plugin.version>
+        <maven.spotbugs.plugin.version>3.1.12.2</maven.spotbugs.plugin.version>
         <maven.findbugs.plugin.version>3.0.5</maven.findbugs.plugin.version>
         <maven.failsafe.plugin.version>3.0.0-M3</maven.failsafe.plugin.version>
         <maven.xml.plugin.version>1.0.2</maven.xml.plugin.version>
