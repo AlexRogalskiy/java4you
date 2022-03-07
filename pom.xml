@@ -75,7 +75,7 @@
         <hsqldb.version>2.4.1</hsqldb.version>
 
         <hamcrest-core.version>2.1</hamcrest-core.version>
-        <guice.version>4.2.2</guice.version>
+        <guice.version>4.2.3</guice.version>
         <jsoup.version>1.12.1</jsoup.version>
         <mailjet-client.version>4.1.1</mailjet-client.version>
 
