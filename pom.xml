@@ -43,7 +43,7 @@
         <source-prefix>${project.groupId}</source-prefix>
         <docker.image.prefix>alpenidos</docker.image.prefix>
 
-        <spring-webmvc.version>5.2.0.RELEASE</spring-webmvc.version>
+        <spring-webmvc.version>5.3.18</spring-webmvc.version>
         <spring-boot-starter.version>2.1.4.RELEASE</spring-boot-starter.version>
         <spring-data-jpa.version>2.1.8.RELEASE</spring-data-jpa.version>
         <spring-cloud.version>2.1.2.RELEASE</spring-cloud.version>
