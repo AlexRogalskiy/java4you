@@ -68,7 +68,7 @@
         </hibernate-validator-annotation-processor.version>
         <hibernate-core.version>5.4.2.Final</hibernate-core.version>
 
-        <mysql-connector-java.version>8.0.16</mysql-connector-java.version>
+        <mysql-connector-java.version>8.0.31</mysql-connector-java.version>
         <postgresql.version>42.2.5</postgresql.version>
         <h2.version>1.4.199</h2.version>
         <mongodb.version>3.10.1</mongodb.version>
