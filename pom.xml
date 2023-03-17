@@ -56,7 +56,7 @@
         <rollbar.version>1.4.1</rollbar.version>
 
         <apache.commons.math.version>3.6.1</apache.commons.math.version>
-        <apache.commons.compress.version>1.19</apache.commons.compress.version>
+        <apache.commons.compress.version>1.21</apache.commons.compress.version>
         <apache.httpcomponents.version>4.5.7</apache.httpcomponents.version>
         <apache.fluent-hc.version>4.5.7</apache.fluent-hc.version>
         <apache.commons.io.version>2.6</apache.commons.io.version>
