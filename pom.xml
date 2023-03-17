@@ -53,7 +53,7 @@
 
         <camel.version>3.11.0</camel.version>
         <camel-spring-boot.version>3.0.1</camel-spring-boot.version>
-        <rollbar.version>1.4.1</rollbar.version>
+        <rollbar.version>1.10.0</rollbar.version>
 
         <apache.commons.math.version>3.6.1</apache.commons.math.version>
         <apache.commons.compress.version>1.19</apache.commons.compress.version>
