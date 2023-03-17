@@ -76,7 +76,7 @@
 
         <hamcrest-core.version>2.1</hamcrest-core.version>
         <guice.version>4.2.2</guice.version>
-        <jsoup.version>1.12.1</jsoup.version>
+        <jsoup.version>1.15.3</jsoup.version>
         <mailjet-client.version>4.1.1</mailjet-client.version>
 
         <reactivex.rxjava2.version>2.2.7</reactivex.rxjava2.version>
