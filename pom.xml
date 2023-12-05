@@ -100,7 +100,7 @@
         <aws-lambda-java-events.version>2.2.9</aws-lambda-java-events.version>
         <aws-lambda-log4j.version>1.0.0</aws-lambda-log4j.version>
 
-        <logback.version>1.2.3</logback.version>
+        <logback.version>1.2.13</logback.version>
         <lombok.version>1.18.6</lombok.version>
 
         <compile-tests.skip>false</compile-tests.skip>
